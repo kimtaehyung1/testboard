@@ -14,10 +14,8 @@
 	<bean class="org.springframework.jdbc.datasource.DriverManagerDataSource"
 		id="dataSource">
 		<property value="com.mysql.cj.jdbc.Driver" name="driverClassName" />
-		<property value="jdbc:mysql://127.0.0.1:3306/root?useSSL=false&amp;serverTimezone=UTC
-
-출처: http://all-record.tistory.com/175 [세상의 모든 기록]" name="url" />
-		<property value="orcl" name="username" />
+		<property value="jdbc:mysql://localhost:3306/mysql?serverTimezone=UTC" name="url" />
+		<property value="root" name="username" />
 		<property value="1234" name="password" />
 	</bean>
 
