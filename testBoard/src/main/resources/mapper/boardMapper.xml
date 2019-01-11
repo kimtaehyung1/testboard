@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+ 
+<mapper namespace="org.board.mapper.BoardMapper">
+ 
+ 
+    <!-- 게시판 추가하기 -->
+    <insert id="insertBoard" >
+        insert into TESTBOARD 
+        (no,title,writer,detail,b_date) values(no.nextval,#{title},#{writer},#{detail},SYSDATE)
+    </insert>
+    
+    <!-- 게시판 리스트보기 -->
+    <select id="listBoard" resultType="org.board.vo.BoardVO">
+    <![CDATA[
+        select * from TESTBOARD 
+        order by no DESC
+    ]]>
+    </select>
+    
+    <!-- 게시판 상세보기 -->
+    <select id="detailBoard" resultType="org.board.vo.BoardVO">
+            select * from TESTBOARD where no = #{no}
+    </select>
+ 
+    <!-- 게시판 삭제하기 -->
+    <delete id="deleteBoard">
+        delete from TESTBOARD where no = #{no}
+    </delete>
+    
+    <!-- 게시판 수정하기 -->
+    <update id="updateBoard">
+        update TESTBOARD set title = #{title} ,detail = #{detail} where no = #{no}
+    </update>
+ 
+ </mapper>
+
+
