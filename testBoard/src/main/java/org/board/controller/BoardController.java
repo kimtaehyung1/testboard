@@ -17,11 +17,11 @@ public class BoardController {
     @Inject
     private BoardService service;
     
-    @RequestMapping(value="/create.do",method=RequestMethod.GET)
+    @RequestMapping(value="/create.do",method=RequestMethod.GET)   
     public void createGET(BoardVO vo, Model model) throws Exception{
     	
         System.out.println(" /board/create 입니다. GET방식");
-    }
+    } 
     
     @RequestMapping(value = "/create.do",method=RequestMethod.POST )
     public String createPOST(BoardVO vo, RedirectAttributes attr) throws Exception{
