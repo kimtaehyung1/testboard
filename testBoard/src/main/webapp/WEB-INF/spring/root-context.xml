@@ -23,7 +23,7 @@
 
 		<bean class="org.springframework.jdbc.datasource.DriverManagerDataSource"
 		id="dataSource">
-		<property value="com.mysql.cj.jdbc.Driver" name="driverClassName" />
+		<property value="oracle.jdbc.driver.OracleDriver" name="driverClassName" />
 		<property value="jdbc:oracle:thin:@localhost:1521:XE" name="url" />
 		<property value="orcl" name="username" />
 		<property value="1234" name="password" />

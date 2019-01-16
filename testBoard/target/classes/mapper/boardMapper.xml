@@ -15,7 +15,7 @@
     </insert>
     
     <!-- 게시판 리스트보기 -->
-    <select id="listBoard" resultType="org.board.vo.BoardVO">
+    <select id="listBoard" resultType="org.board.vo.BoardVO">	
     <![CDATA[
         select * from TESTBOARD 
         order by no DESC
